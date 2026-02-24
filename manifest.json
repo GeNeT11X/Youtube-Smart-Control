@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Smart Control",
+  "version": "1.0.0",
+  "description": "Automatically control YouTube video settings: playback speed, volume, captions, cinema mode, skip ads, and disable shorts",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
